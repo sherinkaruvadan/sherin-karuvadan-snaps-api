@@ -55,7 +55,7 @@ router.post("/:id/comments", (req, res) => {
 
   //add timestamp and uuids to the new comment
   newComment.id = uuidv4();
-  newComment.timestamp = new Date();
+  newComment.timestamp = Date.now();
   console.log(newComment);
   const selectedPhoto = photos.find((photo) => photo.id === photoId);
   selectedPhoto.comments.push(newComment);

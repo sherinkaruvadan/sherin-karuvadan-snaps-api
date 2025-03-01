@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 //serve static files
 app.use(express.static("public"));
-// parses JSON in the request body and adds it as `req.body`
+// parses JSON in the request body
 app.use(express.json());
 
 app.get("/", (req, res) => {
